@@ -9,7 +9,7 @@ before_install:
 
 script:
   - docker run -e CI=true stephengrider/react-test npm test -- --coverage
-
+  # you can add a new test here
 after_success:
   - docker build -t stephengrider/multi-client ./client
   - docker build -t stephengrider/multi-nginx ./nginx
